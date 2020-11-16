@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<robot name="lophorina">
+
+  <material name="gray">
+    <color rgba="0.8 0.8 0.8 1"/>
+  </material>
+
+  <material name="blue">
+    <color rgba="0 0 1 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+
+  <material name="green">
+    <color rgba="0 1 0 1"/>
+  </material>
+
+  <link name="odom">  
+  </link>  
+
+  <joint name="odom_to_base_link" type="fixed">
+    <parent link="odom"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/robot_body.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 1.57079632679"/>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.5 0.8 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+	  <!-- Volume:  1.2327948124e+06 -->
+	  <mass value="1.5"/>
+
+	  <!-- Center of mass:  1.4152750000e-02  7.9666542000e-01  2.5105856930e+01 -->
+	  <pose>  1.4152750000e-02  7.9666542000e-01  2.5105856930e+01 0 0 0 </pose>
+
+	  <!-- Inertia matrix -->
+	  <inertia
+	    ixx="4.1954149681e+04"
+	    ixy="1.6912509242e-02"
+	    ixz="2.2605965587e-03"
+	    iyy="6.8166425968e+03"
+	    iyz="-2.2634978773e+00"
+	    izz="4.8089728649e+04"/>
+	  
+   </inertial>
+  </link>
+
+  <link name="arm0">
+    <visual>
+      <geometry>
+         <box size="0.3 0.01 0.01"/>
+      </geometry>
+      <origin xyz="0.15 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="base_link_to_arm0" type="revolute">
+    <limit effort="1000.0" velocity="0.5" lower="0" upper="0.78539816339"/>
+    <parent link="base_link"/>
+    <child link="arm0"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="arm1">
+    <visual>
+      <geometry>
+         <box size="0.3 0.01 0.01"/>
+      </geometry>
+      <origin xyz="0.15 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="base_link_to_arm1" type="revolute">
+    <limit effort="1000.0" velocity="0.5" lower="0" upper="0.78539816339"/>
+    <parent link="arm0"/>
+    <child link="arm1"/>
+    <axis xyz="0 -1 0"/>
+    <origin xyz="0.3 0 0"/>
+  </joint>
+
+  <link name="motor_front_right">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/tilt_motor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
+    </visual>
+    <inertial>
+	  <!-- Volume:  4.3863842816e+04 -->
+	  <mass value="0.15"/>
+
+	  <!-- Center of mass:  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 -->
+	  <pose>  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 0 0 0 </pose>
+
+	  <!-- Inertia matrix -->
+	  <inertia
+	    ixx="6.5199681921e+01"
+	    ixy="-1.8406174301e+00"
+	    ixz="-4.4278584689e+01"
+	    iyy="2.7135930913e+02"
+	    iyz="-5.5408063591e-01"
+	    izz="2.2968739432e+02"/>
+	  
+    </inertial>
+  </link>
+
+  <link name="motor_front_left">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/tilt_motor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue"/>
+      <origin rpy="0 0 -1.57079632679" xyz="0 0 0"/>
+    </visual>
+   <inertial>
+	  <!-- Volume:  4.3863842816e+04 -->
+	  <mass value="0.15"/>
+
+	  <!-- Center of mass:  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 -->
+	  <pose>  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 0 0 0 </pose>
+
+	  <!-- Inertia matrix -->
+	  <inertia
+	    ixx="6.5199681921e+01"
+	    ixy="-1.8406174301e+00"
+	    ixz="-4.4278584689e+01"
+	    iyy="2.7135930913e+02"
+	    iyz="-5.5408063591e-01"
+	    izz="2.2968739432e+02"/>
+	
+   </inertial>
+  </link>
+
+  <link name="motor_back_right">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/tilt_motor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
+    </visual>
+    <inertial>
+	  <!-- Volume:  4.3863842816e+04 -->
+	  <mass value="0.15"/>
+
+	  <!-- Center of mass:  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 -->
+	  <pose>  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 0 0 0 </pose>
+
+	  <!-- Inertia matrix -->
+	  <inertia
+	    ixx="6.5199681921e+01"
+	    ixy="-1.8406174301e+00"
+	    ixz="-4.4278584689e+01"
+	    iyy="2.7135930913e+02"
+	    iyz="-5.5408063591e-01"
+	    izz="2.2968739432e+02"/>
+	  
+</inertial>
+  </link>
+
+  <link name="motor_back_left">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/tilt_motor.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 -1.57079632679" xyz="0 0 0"/>
+    </visual>
+    <inertial>
+	  <!-- Volume:  4.3863842816e+04 -->
+	  <mass value="0.15"/>
+
+	  <!-- Center of mass:  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 -->
+	  <pose>  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 0 0 0 </pose>
+
+	  <!-- Inertia matrix -->
+	  <inertia
+	    ixx="6.5199681921e+01"
+	    ixy="-1.8406174301e+00"
+	    ixz="-4.4278584689e+01"
+	    iyy="2.7135930913e+02"
+	    iyz="-5.5408063591e-01"
+	    izz="2.2968739432e+02"/>
+	  
+   </inertial>
+  </link>
+
+  <link name="front_right_propeller">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/cw_propeller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="green"/>
+    </visual>
+    <inertial>
+	  <!-- Volume:  6.4020546560e+03 -->
+	  <mass value="0.008"/>
+
+	  <!-- Center of mass: -7.6309433000e-01 -1.5900170000e-02  5.6214502000e+00 -->
+	  <pose> -7.6309433000e-01 -1.5900170000e-02  5.6214502000e+00 0 0 0 </pose>
+
+	  <!-- Inertia matrix -->
+	  <inertia
+	    ixx="1.0083531730e+00"
+	    ixy="-4.9698650900e+00"
+	    ixz="-1.5181902820e-02"
+	    iyy="3.3832505747e+01"
+	    iyz="-1.8549383658e-03"
+	    izz="3.4773160227e+01"/>
+	  
+   </inertial>
+  </link>
+  <gazebo reference="front_right_propeller">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <plugin name="front_right_propeller_liftDrag" filename="libLiftDragPlugin.so">
+        <a0>0.4</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0</cma>
+        <alpha_stall>1.5</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.37 0 0.77</cp>
+        <area>0.1</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>front_right_propeller</link_name>
+  </plugin>
+  <link name="front_left_propeller">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/ccw_propeller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <inertial>
+	     <!-- Volume:  6.4020546560e+03 -->
+	     <mass value="0.008"/>
+
+	     <!-- Center of mass: -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 -->
+	     <pose> -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 0 0 0 </pose>
+
+	     <!-- Inertia matrix -->
+	     <inertia
+	       ixx="1.0083529717e+00"
+	       ixy="4.9698656267e+00"
+	       ixz="-1.5182323164e-02"
+	       iyy="3.3832507894e+01"
+	       iyz="1.8549094082e-03"
+	       izz="3.4773160227e+01"/>
+	     
+   </inertial>
+  </link>
+  <plugin name="front_left_propeller_liftDrag" filename="libLiftDragPlugin.so">
+        <a0>0.4</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0</cma>
+        <alpha_stall>1.5</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.37 0 0.77</cp>
+        <area>0.1</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>front_left_propeller</link_name>
+  </plugin>
+  <link name="back_left_propeller">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/cw_propeller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <inertial>
+	  <!-- Volume:  6.4020546560e+03 -->
+	  <mass value="0.008"/>
+
+	  <!-- Center of mass: -7.6309433000e-01 -1.5900170000e-02  5.6214502000e+00 -->
+	  <pose> -7.6309433000e-01 -1.5900170000e-02  5.6214502000e+00 0 0 0 </pose>
+
+	  <!-- Inertia matrix -->
+	  <inertia
+	    ixx="1.0083531730e+00"
+	    ixy="-4.9698650900e+00"
+	    ixz="-1.5181902820e-02"
+	    iyy="3.3832505747e+01"
+	    iyz="-1.8549383658e-03"
+	    izz="3.4773160227e+01"/>
+	  
+   </inertial>
+  </link>
+  <plugin name="back_left_propeller_liftDrag" filename="libLiftDragPlugin.so">
+        <a0>0.4</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0</cma>
+        <alpha_stall>1.5</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.37 0 0.77</cp>
+        <area>0.1</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>back_left_propeller</link_name>
+  </plugin>
+  <link name="back_right_propeller">
+    <visual>
+      <geometry>
+        <mesh filename="package://lophorina/meshes/ccw_propeller.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <inertial>
+	<!-- Volume:  6.4020546560e+03 -->
+	<mass value="0.008"/>
+
+	<!-- Center of mass: -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 -->
+	<pose> -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 0 0 0 </pose>
+
+	<!-- Inertia matrix -->
+	<inertia
+	 ixx="1.0083529717e+00"
+	    ixy="4.9698656267e+00"
+	    ixz="-1.5182323164e-02"
+	    iyy="3.3832507894e+01"
+	    iyz="1.8549094082e-03"
+	    izz="3.4773160227e+01"/>
+	
+   </inertial>
+  </link>
+  <plugin name="back_right_propeller_liftDrag" filename="libLiftDragPlugin.so">
+        <a0>0.4</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0</cma>
+        <alpha_stall>1.5</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.37 0 0.77</cp>
+        <area>0.1</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>back_right_propeller</link_name>
+  </plugin>
+  <joint name="base_link_to_motor_front_right" type="revolute">
+    <limit effort="1000.0" velocity="0.5" lower="-0.78539816339" upper="0.78539816339"/>
+    <parent link="base_link"/>
+    <child link="motor_front_right"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0.1825 0.126 0.025"/>
+  </joint>
+
+  <transmission name="base_link_to_motor_front_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$base_link_to_motor_front_right_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="base_link_to_motor_front_right">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <joint name="base_link_to_motor_front_left" type="revolute">
+    <limit effort="1000.0" velocity="0.5" lower="-0.78539816339" upper="0.78539816339"/>
+    <parent link="base_link"/>
+    <child link="motor_front_left"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0.1825 -0.126 0.025"/>
+  </joint>
+
+  <transmission name="base_link_to_motor_front_left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$base_link_to_motor_front_left_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="base_link_to_motor_front_left">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <joint name="base_link_to_motor_back_right" type="revolute">
+    <limit effort="1000.0" velocity="0.5" lower="-0.78539816339" upper="0.78539816339"/>
+    <parent link="base_link"/>
+    <child link="motor_back_right"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="-0.1825 0.126 0.025"/>
+  </joint>
+
+  <transmission name="base_link_to_motor_back_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$base_link_to_motor_back_right_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="base_link_to_motor_back_right">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <joint name="base_link_to_motor_back_left" type="revolute">
+    <limit effort="1000.0" velocity="0.5" lower="-0.78539816339" upper="0.78539816339"/>
+    <parent link="base_link"/>
+    <child link="motor_back_left"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="-0.1825 -0.126 0.025"/>
+  </joint>
+
+  <transmission name="base_link_to_motor_back_left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$base_link_to_motor_back_left_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="base_link_to_motor_back_left">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <joint name="motor_front_right_to_front_right_propeller" type="continuous">
+    <parent link="motor_front_right"/>
+    <child link="front_right_propeller"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0.138 0.05"/>
+  </joint>
+
+  <transmission name="motor_front_right_to_front_right_propeller_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$motor_front_right_to_front_right_propeller_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="motor_front_right_to_front_right_propeller">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <joint name="motor_front_left_to_front_left_propeller" type="continuous">
+    <parent link="motor_front_left"/>
+    <child link="front_left_propeller"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 -0.138 0.05"/>
+  </joint>
+
+  <transmission name="motor_front_left_to_front_left_propeller_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$motor_front_left_to_front_left_propeller_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="motor_front_left_to_front_left_propeller">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <joint name="motor_back_right_to_back_right_propeller" type="continuous">
+    <parent link="motor_back_right"/>
+    <child link="back_right_propeller"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0.138 0.05"/>
+  </joint>
+
+  <transmission name="motor_back_right_to_back_right_propeller_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$motor_back_right_to_back_right_propeller_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="motor_back_right_to_back_right_propeller">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <joint name="motor_back_left_to_back_left_propeller" type="continuous">
+    <parent link="motor_back_left"/>
+    <child link="back_left_propeller"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 -0.138 0.05"/>
+  </joint>
+
+  <transmission name="motor_back_left_to_back_left_propeller_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="$motor_back_left_to_back_left_propeller_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="motor_back_left_to_back_left_propeller">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- Gazebo plugin for ROS Control -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+
+</robot>

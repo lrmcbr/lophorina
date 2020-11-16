@@ -1,0 +1,7 @@
+type: "velocity_controllers/JointGroupVelocityController"
+joints:
+ - motor_front_right_to_front_right_propeller
+ - motor_front_left_to_front_left_propeller
+ - motor_back_right_to_back_right_propeller
+ - motor_back_left_to_back_left_propeller
+
