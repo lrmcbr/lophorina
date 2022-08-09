@@ -1,3 +1,5 @@
+<p align=center><img src="robotizando.svg" width="400"></p>
+
 # Lophorina
 
 <img src="lophorina.png" width="400" />
@@ -8,6 +10,8 @@
 Este repositório contém o código fonte utilizado para fazer a simulação física do tilt-quadrirrotor lophorina no ROS Gazebo.
 
 Este código pode ser utilizado como um framework, servindo de base para simular outros VANTs.
+
+A simulação da força de empuxo nas hélices é feita através de um plugin que utiliza os parâmetros a, b e c de uma curva de segundo grau para relacionar a velocidade angular com o empuxo.
 
 ## Instalação
 
