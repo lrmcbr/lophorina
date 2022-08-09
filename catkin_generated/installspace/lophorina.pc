@@ -1,0 +1,8 @@
+prefix=/home/luis/catkin_ws/install
+
+Name: lophorina
+Description: Description of lophorina
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs gazebo_ros

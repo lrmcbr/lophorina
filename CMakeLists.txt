@@ -9,6 +9,7 @@ project(lophorina)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  gazebo_ros
   rospy
   std_msgs
 )
@@ -105,7 +106,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES lophorina
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+  CATKIN_DEPENDS roscpp rospy std_msgs gazebo_ros
 #  DEPENDS system_lib
 )
 
@@ -115,15 +116,24 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
+# include_directories(
 # include
-  ${catkin_INCLUDE_DIRS}
-)
+#  ${catkin_INCLUDE_DIRS}
+# )
+
+link_directories(${GAZEBO_LIBRARY_DIRS})
+include_directories(${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/lophorina.cpp
 # )
+
+add_library(${PROJECT_NAME} src/simple_world_plugin.cpp)
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+
+# add_library(helice_push SHARED src/helice_push.cc)
+# target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -192,9 +202,6 @@ include_directories(
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
 
-install(DIRECTORY images meshes launch rviz urdf
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
-
 #############
 ## Testing ##
 #############
@@ -205,14 +212,5 @@ install(DIRECTORY images meshes launch rviz urdf
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
-if(CATKIN_ENABLE_TESTING)
-  find_package(roslaunch REQUIRED)
-  roslaunch_add_file_check(launch)
-endif()
-
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
-catkin_install_python(PROGRAMS src/talker.py src/listener.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)

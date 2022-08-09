@@ -38,8 +38,9 @@
       <material name="black"/>
     </visual>
     <collision>
+      <origin xyz="0 0 0.05"/>
       <geometry>
-        <box size="0.5 0.8 0.1"/>
+        <box size="0.6 0.8 0.1"/>        
       </geometry>
     </collision>
     <inertial>
@@ -47,20 +48,19 @@
 	  <mass value="1.5"/>
 
 	  <!-- Center of mass:  1.4152750000e-02  7.9666542000e-01  2.5105856930e+01 -->
-	  <pose>  1.4152750000e-02  7.9666542000e-01  2.5105856930e+01 0 0 0 </pose>
+	  <pose>  1.4166e-05  7.96665e-04  2.5105858e-02 0 0 0 </pose>
 
 	  <!-- Inertia matrix -->
 	  <inertia
-	    ixx="4.1954149681e+04"
-	    ixy="1.6912509242e-02"
-	    ixz="2.2605965587e-03"
-	    iyy="6.8166425968e+03"
-	    iyz="-2.2634978773e+00"
-	    izz="4.8089728649e+04"/>
+	    ixx="4.1954e-02"
+	    ixy="1.6879e-08"
+	    ixz="2.2501e-09"
+	    iyy="6.8166e-03"
+	    iyz="-2.2635e-06"
+	    izz="4.8090e-02"/>
 	  
    </inertial>
   </link>
-
   <link name="motor_front_right">
     <visual>
       <geometry>
@@ -74,16 +74,16 @@
 	  <mass value="0.15"/>
 
 	  <!-- Center of mass:  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 -->
-	  <pose>  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 0 0 0 </pose>
+	  <pose>  1.16074806e-01 1.2213773e-02 1.8455067e-02 0 0 0 </pose>
 
 	  <!-- Inertia matrix -->
 	  <inertia
-	    ixx="6.5199681921e+01"
-	    ixy="-1.8406174301e+00"
-	    ixz="-4.4278584689e+01"
-	    iyy="2.7135930913e+02"
-	    iyz="-5.5408063591e-01"
-	    izz="2.2968739432e+02"/>
+	    ixx="6.5200e-05"
+	    ixy="-1.8405e-06"
+	    ixz="-4.4279e-05"
+	    iyy="2.7136e-04"
+	    iyz="-5.5407e-07"
+	    izz="2.2969e-04"/>
 	  
     </inertial>
   </link>
@@ -101,16 +101,16 @@
 	  <mass value="0.15"/>
 
 	  <!-- Center of mass:  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 -->
-	  <pose>  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 0 0 0 </pose>
+	  <pose>  1.16074806e-01 1.2213773e-02 1.8455067e-02 0 0 0 </pose>
 
 	  <!-- Inertia matrix -->
 	  <inertia
-	    ixx="6.5199681921e+01"
-	    ixy="-1.8406174301e+00"
-	    ixz="-4.4278584689e+01"
-	    iyy="2.7135930913e+02"
-	    iyz="-5.5408063591e-01"
-	    izz="2.2968739432e+02"/>
+	    ixx="6.5200e-05"
+	    ixy="-1.8405e-06"
+	    ixz="-4.4279e-05"
+	    iyy="2.7136e-04"
+	    iyz="-5.5407e-07"
+	    izz="2.2969e-04"/>
 	
    </inertial>
   </link>
@@ -128,16 +128,16 @@
 	  <mass value="0.15"/>
 
 	  <!-- Center of mass:  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 -->
-	  <pose>  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 0 0 0 </pose>
+	  <pose>  1.16074806e-01 1.2213773e-02 1.8455067e-02 0 0 0 </pose>
 
 	  <!-- Inertia matrix -->
 	  <inertia
-	    ixx="6.5199681921e+01"
-	    ixy="-1.8406174301e+00"
-	    ixz="-4.4278584689e+01"
-	    iyy="2.7135930913e+02"
-	    iyz="-5.5408063591e-01"
-	    izz="2.2968739432e+02"/>
+	    ixx="6.5200e-05"
+	    ixy="-1.8405e-06"
+	    ixz="-4.4279e-05"
+	    iyy="2.7136e-04"
+	    iyz="-5.5407e-07"
+	    izz="2.2969e-04"/>
 	  
 </inertial>
   </link>
@@ -155,16 +155,16 @@
 	  <mass value="0.15"/>
 
 	  <!-- Center of mass:  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 -->
-	  <pose>  1.1607480469e+02  1.2213770750e+01  1.8455069580e+01 0 0 0 </pose>
+	  <pose>  1.16074806e-01 1.2213773e-02 1.8455067e-02 0 0 0 </pose>
 
 	  <!-- Inertia matrix -->
 	  <inertia
-	    ixx="6.5199681921e+01"
-	    ixy="-1.8406174301e+00"
-	    ixz="-4.4278584689e+01"
-	    iyy="2.7135930913e+02"
-	    iyz="-5.5408063591e-01"
-	    izz="2.2968739432e+02"/>
+	    ixx="6.5200e-05"
+	    ixy="-1.8405e-06"
+	    ixz="-4.4279e-05"
+	    iyy="2.7136e-04"
+	    iyz="-5.5407e-07"
+	    izz="2.2969e-04"/>
 	  
    </inertial>
   </link>
@@ -182,38 +182,31 @@
 	  <mass value="0.008"/>
 
 	  <!-- Center of mass: -7.6309433000e-01 -1.5900170000e-02  5.6214502000e+00 -->
-	  <pose> -7.6309433000e-01 -1.5900170000e-02  5.6214502000e+00 0 0 0 </pose>
+	  <pose> 0 0 5.621359e-03 0 0 0</pose>
 
 	  <!-- Inertia matrix -->
 	  <inertia
-	    ixx="1.0083531730e+00"
-	    ixy="-4.9698650900e+00"
-	    ixz="-1.5181902820e-02"
-	    iyy="3.3832505747e+01"
-	    iyz="-1.8549383658e-03"
-	    izz="3.4773160227e+01"/>
+	    ixx="1.0083e-06"
+	    ixy="-4.9698e-06"
+	    ixz="-1.5179e-08"
+	    iyy="3.3832e-05"
+	    iyz="-1.8552e-09"
+	    izz="3.4773e-05"/>
 	  
-   </inertial>
+   </inertial>   
   </link>
   <gazebo reference="front_right_propeller">
     <material>Gazebo/Orange</material>
   </gazebo>
-  <plugin name="front_right_propeller_liftDrag" filename="libLiftDragPlugin.so">
-        <a0>0.4</a0>
-        <cla>4.752798721</cla>
-        <cda>0.6417112299</cda>
-        <cma>0</cma>
-        <alpha_stall>1.5</alpha_stall>
-        <cla_stall>-3.85</cla_stall>
-        <cda_stall>-0.9233984055</cda_stall>
-        <cma_stall>0</cma_stall>
-        <cp>-0.37 0 0.77</cp>
-        <area>0.1</area>
-        <air_density>1.2041</air_density>
-        <forward>1 0 0</forward>
-        <upward>0 0 1</upward>
-        <link_name>front_right_propeller</link_name>
-  </plugin>
+
+  <gazebo>
+    <plugin name="front_right_propeller_model_push" filename="libhelice_push.so">
+          <link_name>front_right_propeller</link_name>
+          <force>20</force>
+    </plugin>
+  </gazebo>
+
+
   <link name="front_left_propeller">
     <visual>
       <geometry>
@@ -226,35 +219,32 @@
 	     <mass value="0.008"/>
 
 	     <!-- Center of mass: -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 -->
-	     <pose> -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 0 0 0 </pose>
+	     <pose> 0 0 5.621359e-03 0 0 0</pose>
 
 	     <!-- Inertia matrix -->
 	     <inertia
-	       ixx="1.0083529717e+00"
-	       ixy="4.9698656267e+00"
-	       ixz="-1.5182323164e-02"
-	       iyy="3.3832507894e+01"
-	       iyz="1.8549094082e-03"
-	       izz="3.4773160227e+01"/>
+	 	    ixx="1.0084e-06"
+	    	ixy="4.9698e-06"
+	    	ixz="-1.5181e-08"
+	    	iyy="3.3832e-05"
+	    	iyz="1.8550e-09"
+	    	izz="3.4773e-05"/>
 	     
    </inertial>
   </link>
-  <plugin name="front_left_propeller_liftDrag" filename="libLiftDragPlugin.so">
-        <a0>0.4</a0>
-        <cla>4.752798721</cla>
-        <cda>0.6417112299</cda>
-        <cma>0</cma>
-        <alpha_stall>1.5</alpha_stall>
-        <cla_stall>-3.85</cla_stall>
-        <cda_stall>-0.9233984055</cda_stall>
-        <cma_stall>0</cma_stall>
-        <cp>-0.37 0 0.77</cp>
-        <area>0.1</area>
-        <air_density>1.2041</air_density>
-        <forward>1 0 0</forward>
-        <upward>0 0 1</upward>
-        <link_name>front_left_propeller</link_name>
-  </plugin>
+  <gazebo>
+    <plugin name="front_left_propeller_model_push" filename="libhelice_push.so">
+          <link_name>front_left_propeller</link_name>
+          <force>20</force>
+          <dir>ccw</dir>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="front_left_propeller">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+
   <link name="back_left_propeller">
     <visual>
       <geometry>
@@ -267,35 +257,31 @@
 	  <mass value="0.008"/>
 
 	  <!-- Center of mass: -7.6309433000e-01 -1.5900170000e-02  5.6214502000e+00 -->
-	  <pose> -7.6309433000e-01 -1.5900170000e-02  5.6214502000e+00 0 0 0 </pose>
+	  <pose> 0 0 5.621359e-03 0 0 0</pose>
 
 	  <!-- Inertia matrix -->
 	  <inertia
-	    ixx="1.0083531730e+00"
-	    ixy="-4.9698650900e+00"
-	    ixz="-1.5181902820e-02"
-	    iyy="3.3832505747e+01"
-	    iyz="-1.8549383658e-03"
-	    izz="3.4773160227e+01"/>
+	    ixx="1.0083e-06"
+	    ixy="-4.9698e-06"
+	    ixz="-1.5179e-08"
+	    iyy="3.3832e-05"
+	    iyz="-1.8552e-09"
+	    izz="3.4773e-05"/>
 	  
    </inertial>
   </link>
-  <plugin name="back_left_propeller_liftDrag" filename="libLiftDragPlugin.so">
-        <a0>0.4</a0>
-        <cla>4.752798721</cla>
-        <cda>0.6417112299</cda>
-        <cma>0</cma>
-        <alpha_stall>1.5</alpha_stall>
-        <cla_stall>-3.85</cla_stall>
-        <cda_stall>-0.9233984055</cda_stall>
-        <cma_stall>0</cma_stall>
-        <cp>-0.37 0 0.77</cp>
-        <area>0.1</area>
-        <air_density>1.2041</air_density>
-        <forward>1 0 0</forward>
-        <upward>0 0 1</upward>
-        <link_name>back_left_propeller</link_name>
-  </plugin>
+
+  <gazebo reference="back_left_propeller">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="back_left_propeller_model_push" filename="libhelice_push.so">
+          <link_name>back_left_propeller</link_name>
+          <force>20</force>
+    </plugin>
+  </gazebo>
+
   <link name="back_right_propeller">
     <visual>
       <geometry>
@@ -304,39 +290,36 @@
       <material name="red"/>
     </visual>
     <inertial>
-	<!-- Volume:  6.4020546560e+03 -->
-	<mass value="0.008"/>
+	    <!-- Volume:  6.4020546560e+03 -->
+	    <mass value="0.008"/>
 
-	<!-- Center of mass: -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 -->
-	<pose> -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 0 0 0 </pose>
+      <!-- Center of mass: -1.2450975000e+00  4.7389927000e-01  5.6214502000e+00 -->
+      <pose> 0 0 5.621359e-03 0 0 0</pose>
 
-	<!-- Inertia matrix -->
-	<inertia
-	 ixx="1.0083529717e+00"
-	    ixy="4.9698656267e+00"
-	    ixz="-1.5182323164e-02"
-	    iyy="3.3832507894e+01"
-	    iyz="1.8549094082e-03"
-	    izz="3.4773160227e+01"/>
-	
+      <!-- Inertia matrix -->
+      <inertia
+	 	    ixx="1.0084e-06"
+	    	ixy="4.9698e-06"
+	    	ixz="-1.5181e-08"
+	    	iyy="3.3832e-05"
+	    	iyz="1.8550e-09"
+	    	izz="3.4773e-05"/>
+
    </inertial>
   </link>
-  <plugin name="back_right_propeller_liftDrag" filename="libLiftDragPlugin.so">
-        <a0>0.4</a0>
-        <cla>4.752798721</cla>
-        <cda>0.6417112299</cda>
-        <cma>0</cma>
-        <alpha_stall>1.5</alpha_stall>
-        <cla_stall>-3.85</cla_stall>
-        <cda_stall>-0.9233984055</cda_stall>
-        <cma_stall>0</cma_stall>
-        <cp>-0.37 0 0.77</cp>
-        <area>0.1</area>
-        <air_density>1.2041</air_density>
-        <forward>1 0 0</forward>
-        <upward>0 0 1</upward>
-        <link_name>back_right_propeller</link_name>
-  </plugin>
+
+  <gazebo reference="back_right_propeller">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="back_right_propeller_model_push" filename="libhelice_push.so">
+          <link_name>back_right_propeller</link_name>
+          <force>20</force>
+          <dir>ccw</dir>
+    </plugin>
+  </gazebo>
+  
   <joint name="base_link_to_motor_front_right" type="revolute">
     <limit effort="1000.0" velocity="0.5" lower="-0.78539816339" upper="0.78539816339"/>
     <parent link="base_link"/>
@@ -410,6 +393,7 @@
   </transmission>
 
   <joint name="motor_front_right_to_front_right_propeller" type="continuous">
+    <limit effort="100" velocity="10000"/>
     <parent link="motor_front_right"/>
     <child link="front_right_propeller"/>
     <axis xyz="0 0 1"/>
@@ -427,6 +411,7 @@
   </transmission>
 
   <joint name="motor_front_left_to_front_left_propeller" type="continuous">
+    <limit effort="100" velocity="10000"/>
     <parent link="motor_front_left"/>
     <child link="front_left_propeller"/>
     <axis xyz="0 0 1"/>
@@ -444,6 +429,7 @@
   </transmission>
 
   <joint name="motor_back_right_to_back_right_propeller" type="continuous">
+    <limit effort="100" velocity="10000"/>
     <parent link="motor_back_right"/>
     <child link="back_right_propeller"/>
     <axis xyz="0 0 1"/>
@@ -461,6 +447,7 @@
   </transmission>
 
   <joint name="motor_back_left_to_back_left_propeller" type="continuous">
+    <limit effort="100" velocity="10000"/>
     <parent link="motor_back_left"/>
     <child link="back_left_propeller"/>
     <axis xyz="0 0 1"/>
@@ -479,8 +466,8 @@
 
   <!-- Gazebo plugin for ROS Control -->
   <gazebo>
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/</robotNamespace>
+    <plugin name="lopho_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/lophorina</robotNamespace>
     </plugin>
   </gazebo>
 

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/luis/catkin_ws/src/lophorina/src/helice_push.cc
+functional
+-
+gazebo/gazebo.hh
+-
+gazebo/physics/physics.hh
+-
+gazebo/common/common.hh
+-
+ignition/math/Vector3.hh
+-
+string
+-
+
