@@ -3,7 +3,7 @@
 
 Este repositório contém o código fonte utilizado para fazer a simulação física do tilt-quadrirrotor lophorina no ROS Gazebo.
 
-Este código pode ser utilizado como um framework, servidno de base para simular outros VANTs.
+Este código pode ser utilizado como um framework, servindo de base para simular outros VANTs.
 
 ## Instalação
 
