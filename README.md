@@ -1,4 +1,8 @@
 # Lophorina
+
+<img src="lophorina.png" width="400" />
+
+
 ## Simulação de tilt-quadrirrotor em ROS Gazebo
 
 Este repositório contém o código fonte utilizado para fazer a simulação física do tilt-quadrirrotor lophorina no ROS Gazebo.
